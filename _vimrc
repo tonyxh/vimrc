@@ -18,6 +18,7 @@ nnoremap <leader>g :Git<space>
 nnoremap <leader>n :NERDTree<cr>
 nnoremap <leader>r :set rnu!<cr>
 nnoremap <leader>f /<C-r><C-w>
+nnoremap <leader>v :vsp<cr>
 "Switch between tabs
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <c-w>l
@@ -27,6 +28,7 @@ nnoremap <C-k> <c-w>k
 inoremap <C-s> <ESC>:w<cr>
 nnoremap <C-s> :w<cr>
 nnoremap <leader>w :q<cr>
+nnoremap <leader>t :vs#<cr>
 "comments
 nnoremap <leader>/ I#<esc>
 vnoremap <leader>/ I#<esc>
@@ -38,7 +40,10 @@ imap <C-v> <ESC>"+pa
 "Move
 nnoremap <C-e> $
 nnoremap <C-b> ^
-
+"Select
+nnoremap <C-a> gg<S-v>G
+nnoremap sal ^vg_
+nnoremap saw bve
 
 "key function
 set tabstop=4
@@ -61,6 +66,7 @@ Bundle 'rking/ag.vim'
 Bundle 'MattesGroeger/vim-bookmarks'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
 
